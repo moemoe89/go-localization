@@ -18,6 +18,21 @@ It has the following rules:
 
 Go programming language
 
+## JSON Format
+```
+{
+  "en": {
+    "Good morning": "Good morning"
+  },
+  "id": {
+    "Good morning": "Selamat pagi"
+  },
+  "jp": {
+    "Good morning": "おはようございます"
+  }
+}
+
+```
 
 ## Getting Started
 
