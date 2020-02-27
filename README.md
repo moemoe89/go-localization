@@ -74,24 +74,3 @@ go get github.com/moemoe89/go-localization
 ### Example
 
 You can find a example for the implementation at [example](https://github.com/moemoe89/go-localization/blob/master/example/main.go) repository.
-
-### Unit Test
-
-go-localization provide unit test with 100% code coverage.
-Run the following command to run the unit test:
-```
-cd $GOPATH/src/github.com/moemoe89/go-localization
-go test -v
-```
-
-With code coverage:
-```
-cd $GOPATH/src/github.com/moemoe89/go-localization
-go test -cover
-```
-
-With html output:
-```
-cd $GOPATH/src/github.com/moemoe89/go-localization
-go test -coverprofile=c.out && go tool cover -html=c.out
-```
