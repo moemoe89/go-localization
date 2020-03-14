@@ -16,7 +16,7 @@ func TestBindPath(t *testing.T) {
 
 	path := "./example/language.json"
 	cfg.BindPath(path)
-	if cfg.path != path {
+	if cfg.path[0] != path {
 		t.Errorf("Should return %s, got %s", path, cfg.path)
 	}
 }

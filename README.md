@@ -41,7 +41,10 @@ method `language.New()` to init the data, and you can call some method to bind c
 
 ```
 cfg := language.New()
+// path to look for the language file in
 cfg.BindPath("./language.json")
+// call multiple times to add many search paths
+cfg.BindPath("/home/appname/language.json")
 cfg.BindMainLocale("en")
 ```
  

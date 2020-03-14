@@ -11,7 +11,7 @@ var langs = make(map[string](map[string]string))
 
 // Config has two property: path for save the config file json path and mainLocale for default language code.
 type Config struct {
-	path       string
+	path       []string
 	mainLocale string
 }
 
@@ -23,7 +23,7 @@ func New() *Config {
 
 // Store the config file json path value.
 func (c *Config) BindPath(path string) {
-	c.path = path
+	c.path = append(c.path, path)
 }
 
 // Store the default language code value.
@@ -34,8 +34,16 @@ func (c *Config) BindMainLocale(mainLocale string) {
 // Store the message to map variable.
 func (c Config) Init() (*Config, error) {
 
-	file := c.path
-	raw, err := ioutil.ReadFile(file)
+	var err error
+	var raw []byte
+	for _, path := range c.path {
+		file := path
+		raw, err = ioutil.ReadFile(file)
+		if err == nil {
+			break
+		}
+	}
+
 	if err != nil {
 		return nil, err
 	}
