@@ -48,3 +48,5 @@ inuit_rsa.pub
 #Intellij files
 .idea
 *.iml
+
+*.cov
